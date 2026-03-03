@@ -1,5 +1,6 @@
 ﻿"use client";
 
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -8,6 +9,18 @@ import SiteFooter from "@/components/site-footer";
 import { operaciones, propiedades } from "@/lib/properties";
 
 export default function LandingPage() {
+  return (
+    <Suspense fallback={<LandingPageFallback />}>
+      <LandingPageContent />
+    </Suspense>
+  );
+}
+
+function LandingPageFallback() {
+  return <main className="min-h-screen" />;
+}
+
+function LandingPageContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const selected = searchParams.get("op");
