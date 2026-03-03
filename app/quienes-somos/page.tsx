@@ -128,7 +128,7 @@ export default function QuienesSomosPage() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/#productos" className="rounded-full bg-amber-400 px-6 py-3 text-md font-semibold text-slate-900 hover:shadow-lg">
-              Compra en línea
+             Ver Propiedades
             </Link>
             <Link
               href="/"
