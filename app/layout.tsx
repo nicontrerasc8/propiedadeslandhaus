@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
+import FloatingCartMenu from "@/components/floating-cart-menu";
+import { InterestProvider } from "@/context/interest-context";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -13,8 +15,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Punto Propiedades",
-  description: "Compra, venta y alquiler de propiedades en CABA y GBA.",
+  title: "GOXA Propiedades",
+  description: "Compra, venta y alquiler de propiedades premium en Peru.",
 };
 
 export default function RootLayout({
@@ -25,7 +27,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={`${manrope.variable} ${playfair.variable} antialiased`}>
-        {children}
+        <InterestProvider>
+          <FloatingCartMenu />
+          {children}
+        </InterestProvider>
       </body>
     </html>
   );
