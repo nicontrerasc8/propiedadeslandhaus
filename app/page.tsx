@@ -3,10 +3,7 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import InterestButton from "@/components/interest-button";
 import SiteFooter from "@/components/site-footer";
-import { operaciones, propiedades } from "@/lib/properties";
 
 export default function LandingPage() {
   return (
@@ -21,20 +18,6 @@ function LandingPageFallback() {
 }
 
 function LandingPageContent() {
-  const searchParams = useSearchParams();
-  const router = useRouter();
-  const selected = searchParams.get("op");
-  const tab =
-    selected && operaciones.includes(selected as (typeof operaciones)[number])
-      ? (selected as (typeof operaciones)[number])
-      : "Venta";
-
-  const filtradas = propiedades.filter((p) => p.operacion === tab);
-
-  const handleTabChange = (op: (typeof operaciones)[number]) => {
-    router.replace(`/?op=${encodeURIComponent(op)}`, { scroll: false });
-  };
-
   return (
     <main className="relative min-h-screen overflow-hidden pt-18 text-slate-900 md:pt-20">
       <div className="fixed inset-0 -z-10">
@@ -86,60 +69,43 @@ function LandingPageContent() {
         </div>
       </section>
 
-      <section id="propiedades-grid" className="container mx-auto mt-10 flex flex-wrap justify-center gap-3 px-4">
-        {operaciones.map((op) => (
-          <button
-            key={op}
-            onClick={() => handleTabChange(op)}
-            className={`rounded-full px-6 py-2 text-sm font-semibold transition ${
-              tab === op
-                ? "bg-emerald-700 text-white"
-                : "border border-emerald-100 bg-white/80 text-emerald-900 hover:bg-white"
-            }`}
-          >
-            {op}
-          </button>
-        ))}
-      </section>
-
-      <section className="container mx-auto my-10 grid gap-6 px-4 pb-6 sm:grid-cols-2 lg:grid-cols-3">
-        {filtradas.map((propiedad) => (
-          <article
-            key={propiedad.id}
-            className="rounded-2xl border border-green-100 bg-white/95 p-3 shadow-[0_12px_30px_-20px_rgba(20,83,45,0.45)] transition hover:-translate-y-1 hover:shadow-[0_20px_40px_-30px_rgba(20,83,45,0.45)]"
-          >
-            <div className="relative h-56 overflow-hidden rounded-xl">
-              <Image src={propiedad.imagen} alt={propiedad.titulo} fill className="object-cover" />
-              <p className="absolute left-3 top-3 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-slate-900">
-                {propiedad.operacion}
-              </p>
+      <section id="propiedades-grid" className="container mx-auto my-10 px-4 pb-6">
+        <div className="grid overflow-hidden rounded-[2rem] border border-white/60 bg-white/90 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] backdrop-blur-sm md:grid-cols-[1.15fr,0.85fr]">
+          <div className="relative min-h-[320px] md:min-h-[520px]">
+            <Image
+              src="/hero-2.png"
+              alt="Próximamente en GOXA Propiedades"
+              fill
+              sizes="(max-width: 768px) 100vw, 60vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/65 via-slate-900/30 to-transparent" />
+            <div className="absolute left-6 top-6 rounded-full bg-amber-400 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-slate-900">
+              Próximamente
             </div>
+          </div>
 
-            <div className="space-y-3 p-3">
-              <p className="text-xl font-bold text-emerald-950">{propiedad.precio}</p>
-              <h2 className="text-lg font-semibold text-slate-900">{propiedad.titulo}</h2>
-              <p className="text-sm text-slate-600">{propiedad.ubicacion}</p>
-
-              <div className="flex justify-between text-sm text-slate-600">
-                <span>{propiedad.areaTotal} m2</span>
-                <span>{propiedad.dormitorios || "-"} dorm.</span>
-              </div>
-
-              <div className="flex gap-2 pt-2">
-                <Link
-                  href={`/propiedad/${propiedad.id}`}
-                  className="flex-1 rounded-lg border border-emerald-700 px-3 py-2 text-center text-sm font-semibold text-emerald-800"
-                >
-                  Ver detalle
-                </Link>
-                <InterestButton
-                  property={propiedad}
-                  className="flex-1 rounded-lg bg-emerald-700 px-3 py-2 text-center text-sm font-semibold text-white"
-                />
-              </div>
+          <div className="flex flex-col justify-center gap-5 p-8 md:p-12">
+            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-700">GOXA Store</p>
+            <h2 className="text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
+              Muy pronto encontrarás aquí una nueva experiencia de propiedades.
+            </h2>
+            <p className="max-w-lg text-base leading-7 text-slate-600">
+              Mientras preparamos esta sección, puedes visitar la tienda oficial de GOXA y descubrir los
+              productos disponibles ahora mismo.
+            </p>
+            <div className="pt-2">
+              <Link
+                href="https://www.goxa.pe/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex rounded-full bg-emerald-700 px-6 py-3 font-semibold text-white transition hover:bg-emerald-800"
+              >
+                Ir a la tienda GOXA
+              </Link>
             </div>
-          </article>
-        ))}
+          </div>
+        </div>
       </section>
 
       <SiteFooter />
