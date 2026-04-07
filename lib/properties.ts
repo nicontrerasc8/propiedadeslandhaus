@@ -233,7 +233,7 @@ export const propiedades: Propiedad[] = [
   },
   {
     id: 5,
-    titulo: "Terreno Evelyn en Nueva Berna",
+    titulo: "Terreno en Nueva Berna",
     descripcion:
       "Terreno saneado en zona urbanizada de Nueva Berna, rodeado de casas terminadas, bonitos disenos y paisajes, con la pista llegando al pie del lote.",
     operacion: "Venta",
