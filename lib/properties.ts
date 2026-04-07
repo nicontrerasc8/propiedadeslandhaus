@@ -1,4 +1,4 @@
-﻿export type Propiedad = {
+export type Propiedad = {
   id: number;
   titulo: string;
   descripcion: string;
@@ -8,118 +8,309 @@
   precio: string;
   areaConstruida: number;
   areaTotal: number;
-  dormitorios: number;
-  banos: number;
+  dormitorios?: number;
+  banos?: number;
   imagen: string;
+  galeria?: string[];
+  fichaTecnica?: Array<{
+    label: string;
+    value: string;
+  }>;
+  distribucion?: Array<{
+    titulo: string;
+    items: string[];
+  }>;
+  caracteristicasGenerales?: string[];
 };
 
-export const whatsappNumber = "5491122334455";
+export const whatsappNumber = "51998855069";
 
 export const propiedades: Propiedad[] = [
   {
     id: 1,
-    titulo: "Casa familiar en Jr. Pozuzo 145",
-    descripcion: "Casa de campo con jardin amplio y acabados de madera a minutos de la plaza de Oxapampa.",
+    titulo: "Casa amplia en Sector La Esperanza",
+    descripcion:
+      "Propiedad amplia, bien iluminada y en muy buen estado de conservacion, ubicada frente al campus universitario y a solo 7 minutos del centro de Oxapampa.",
     operacion: "Venta",
     tipo: "Casa",
-    ubicacion: "Jr. Pozuzo 145, Oxapampa",
-    precio: "$ 185,000",
-    areaConstruida: 160,
-    areaTotal: 420,
-    dormitorios: 4,
-    banos: 2,
-    imagen:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+    ubicacion: "Sector La Esperanza, a 7 minutos del centro de Oxapampa",
+    precio: "USD 290,000",
+    areaConstruida: 505,
+    areaTotal: 1268,
+    dormitorios: 3,
+    banos: 4,
+    imagen: "/c1/1.jpg",
+    galeria: ["/c1/1.jpg", "/c1/2.jpg", "/c1/3.jpg", "/c1/4.png", "/c1/5.jpg", "/c1/6.png"],
+    fichaTecnica: [
+      { label: "Area de terreno", value: "1,268 m2" },
+      { label: "Area construida total", value: "505 m2" },
+      { label: "Primer piso", value: "355 m2" },
+      { label: "Segundo piso", value: "150 m2" },
+      { label: "Servicios", value: "Luz (Electrocentro), agua Jass Miraflores y desague" },
+      { label: "Documentos", value: "Partida electronica en RRPP, lista para transferir" },
+    ],
+    distribucion: [
+      {
+        titulo: "Primer piso",
+        items: [
+          "Sala-comedor",
+          "Estar",
+          "Hall de distribucion",
+          "Amplia cocina amoblada con alacena",
+          "2 dormitorios con closet, salida independiente a los jardines y bano incorporado con terma",
+          "Bano de visita",
+          "Escritorio",
+          "Lavanderia",
+          "Deposito",
+          "Cuarto de huesped con bano incorporado",
+          "Terraza posterior con arcos",
+          "Amplio jardin en el frontis y en la parte posterior",
+          "Escalera externa al segundo piso",
+        ],
+      },
+      {
+        titulo: "Segundo piso",
+        items: [
+          "Area techada con paredes externas de machimbrado",
+          "Balcones al frente y posterior con madera",
+          "Ventanas y mamparas instaladas",
+          "Conexiones listas para bano y cocina",
+          "Piso de cemento",
+        ],
+      },
+    ],
+    caracteristicasGenerales: [
+      "La propiedad cuenta con partida registral y declaratoria de fabrica.",
+      "La casa es amplia, bien iluminada y se encuentra en muy buen estado de conservacion.",
+      "La ubicacion frente al campus universitario de agricultura aporta tranquilidad y seguridad, y evita futuras edificaciones que alteren el entorno inmediato.",
+    ],
   },
   {
     id: 2,
-    titulo: "Departamento centrico en Av. San Martin 320",
-    descripcion: "Departamento moderno con balcon y vista verde, ideal para vivir o rentar por temporada.",
+    titulo: "Casa de campo en Grapanazu, Huancabamba",
+    descripcion:
+      "Propiedad en zona tranquila con vistas abiertas al paisaje, casa principal de dos niveles y area productiva con cafe, paltas y otros frutales.",
     operacion: "Venta",
-    tipo: "Departamento",
-    ubicacion: "Av. San Martin 320, Oxapampa",
-    precio: "$ 128,000",
-    areaConstruida: 92,
-    areaTotal: 92,
-    dormitorios: 3,
-    banos: 2,
-    imagen:
-      "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1200&q=80",
+    tipo: "Casa",
+    ubicacion: "Grapanazu, Huancabamba, a 13.5 km del centro de Oxapampa",
+    precio: "USD 500,000",
+    areaConstruida: 196,
+    areaTotal: 11611,
+    dormitorios: 2,
+    banos: 3,
+    imagen: "/c2/1.jpg",
+    galeria: [
+      "/c2/1.jpg",
+      "/c2/2.jpg",
+      "/c2/3.jpg",
+      "/c2/4.jpg",
+      "/c2/5.jpg",
+      "/c2/6.jpg",
+      "/c2/7.jpg",
+      "/c2/8.jpg",
+      "/c2/9.jpg",
+    ],
+    fichaTecnica: [
+      { label: "Area de terreno", value: "11,611,000 m2" },
+      { label: "Area construida de la casa", value: "196 m2" },
+      { label: "Servicios", value: "Luz (Electrocentro) y agua" },
+      { label: "Documentos", value: "Partida electronica en RRPP, lista para transferir" },
+      { label: "Ubicacion", value: "Grapanazu, Huancabamba, a 13.5 km del centro de Oxapampa" },
+    ],
+    distribucion: [
+      {
+        titulo: "Primer piso",
+        items: [
+          "Sala",
+          "Comedor con doble altura",
+          "Cocina",
+          "2 habitaciones",
+          "2 banos completos",
+          "2 terrazas techadas",
+          "Lavanderia",
+          "Deposito",
+          "Bano de servicio",
+        ],
+      },
+      {
+        titulo: "Segundo piso",
+        items: [
+          "Sala grande multiusos para escritorio, sala de TV o lectura",
+          "Balcon con vista abierta al paisaje",
+        ],
+      },
+      {
+        titulo: "Adicional",
+        items: ["Casa independiente para guardian"],
+      },
+    ],
+    caracteristicasGenerales: [
+      "La propiedad cuenta con partida registral.",
+      "Esta ubicada en una zona tranquila y con vistas muy bonitas al paisaje.",
+      "Cuenta con aproximadamente 2,500 m2 con siembra de cafe, paltas y otros frutales.",
+    ],
   },
   {
     id: 3,
-    titulo: "Terreno comercial en Prol. Bolognesi 870",
-    descripcion: "Terreno plano con frente amplio, ideal para hotel boutique o centro gastronomico.",
+    titulo: "Casa de madera en villa cerrada de Quillazu",
+    descripcion:
+      "Casa de madera Chontaquiro construida sobre pilotes de concreto, ubicada dentro de una villa cerrada con acceso al rio y a 12 minutos del centro de Oxapampa.",
     operacion: "Venta",
-    tipo: "Terreno",
-    ubicacion: "Prol. Bolognesi 870, Oxapampa",
-    precio: "$ 210,000",
-    areaConstruida: 0,
-    areaTotal: 3200,
-    dormitorios: 0,
-    banos: 0,
-    imagen:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+    tipo: "Casa",
+    ubicacion: "Quillazu, a 12 minutos del centro de Oxapampa",
+    precio: "USD 195,000",
+    areaConstruida: 127,
+    areaTotal: 3123,
+    dormitorios: 1,
+    banos: 2,
+    imagen: "/c3/1.jpg",
+    galeria: [
+      "/c3/1.jpg",
+      "/c3/2.jpg",
+      "/c3/3.jpg",
+      "/c3/4.jpg",
+      "/c3/5.jpg",
+      "/c3/6.jpg",
+      "/c3/7.jpg",
+      "/c3/8.jpg",
+      "/c3/9.jpg",
+    ],
+    fichaTecnica: [
+      { label: "Area de terreno", value: "3,123 m2" },
+      { label: "Area construida", value: "127 m2" },
+      { label: "Ano de construccion", value: "2017" },
+      { label: "Servicios", value: "Luz (Electrocentro), agua, biodigestor e internet" },
+      { label: "Documentos", value: "Partida electronica en RRPP" },
+    ],
+    distribucion: [
+      {
+        titulo: "Distribucion",
+        items: [
+          "1 habitacion",
+          "2 banos completos",
+          "1 terraza",
+          "1 sala principal",
+          "Sala de estar",
+          "Lavanderia",
+        ],
+      },
+    ],
+    caracteristicasGenerales: [
+      "La casa esta construida sobre pilotes de concreto.",
+      "La estructura principal es de madera Chontaquiro.",
+      "La casa se encuentra dentro de una villa cerrada con acceso al rio.",
+    ],
   },
   {
     id: 4,
-    titulo: "Casa rustica en Jr. Tirol 58",
-    descripcion: "Propiedad acogedora con chimenea, rodeada de arboles y clima fresco todo el ano.",
+    titulo: "Fundo El Arkero en Dos de Mayo",
+    descripcion:
+      "Fundo con frente amplio sobre la trocha principal, zonas semiplanas, vista privilegiada al paisaje y una casa que puede habilitarse rapidamente.",
     operacion: "Venta",
-    tipo: "Casa",
-    ubicacion: "Jr. Tirol 58, Oxapampa",
-    precio: "$ 149,000",
-    areaConstruida: 140,
-    areaTotal: 360,
-    dormitorios: 3,
-    banos: 2,
-    imagen:
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+    tipo: "Terreno",
+    ubicacion: "Dos de Mayo, Chontabamba, a 5 km del centro de Oxapampa",
+    precio: "USD 250,000",
+    areaConstruida: 0,
+    areaTotal: 51800,
+    imagen: "/c4/1.jpg",
+    galeria: ["/c4/1.jpg", "/c4/2.jpg", "/c4/3.jpg", "/c4/4.jpg"],
+    fichaTecnica: [
+      { label: "Area del terreno", value: "5.18 hectareas" },
+      { label: "Precio total", value: "USD 250,000" },
+      { label: "Servicios", value: "Luz (los cables pasan frente al ingreso) y agua de manantial" },
+      { label: "Documentos", value: "Constancia de posesion, para hacer transferencia e ingresar a RRPP" },
+      { label: "Distancia", value: "5 km del centro de Oxapampa, aproximadamente 10 minutos" },
+    ],
+    caracteristicasGenerales: [
+      "La propiedad cuenta con una casa que se puede habilitar rapidamente.",
+      "Es un terreno semiplano en aproximadamente 2.5 hectareas y tiene una pequena plantacion de pinos.",
+      "Hay una casa precaria donde vive un guardian de manera permanente.",
+      "La propiedad se encuentra en la misma trocha principal y tiene un frente aproximado de 200 m.",
+      "Cuenta con una vista privilegiada a todo el paisaje.",
+      "El terreno pertenece a tres propietarios de Lima.",
+      "En la zona hay conexion de telefono.",
+    ],
   },
   {
     id: 5,
-    titulo: "Departamento nuevo en Av. Miraflores 214",
-    descripcion: "Edificio nuevo con acabados premium y acceso rapido a comercios y restaurantes.",
+    titulo: "Terreno Evelyn en Nueva Berna",
+    descripcion:
+      "Terreno saneado en zona urbanizada de Nueva Berna, rodeado de casas terminadas, bonitos disenos y paisajes, con la pista llegando al pie del lote.",
     operacion: "Venta",
-    tipo: "Departamento",
-    ubicacion: "Av. Miraflores 214, Oxapampa",
-    precio: "$ 115,000",
-    areaConstruida: 85,
-    areaTotal: 85,
-    dormitorios: 2,
-    banos: 2,
-    imagen:
-      "https://images.unsplash.com/photo-1493666438817-866a91353ca9?auto=format&fit=crop&w=1200&q=80",
+    tipo: "Terreno",
+    ubicacion: "Nueva Berna, Chontabamba, a 5 minutos del centro de Oxapampa",
+    precio: "S/. 190,000",
+    areaConstruida: 0,
+    areaTotal: 349,
+    imagen: "/c5/1.jpg",
+    galeria: ["/c5/1.jpg", "/c5/2.jpg", "/c5/3.jpg"],
+    fichaTecnica: [
+      { label: "Area de terreno", value: "349 m2" },
+      { label: "Precio", value: "S/. 190,000" },
+      { label: "Servicios", value: "Agua y luz" },
+      { label: "Documentos", value: "Partida electronica en RRPP" },
+      { label: "Ubicacion", value: "Nueva Berna, Chontabamba, a 5 minutos del centro de Oxapampa" },
+    ],
+    caracteristicasGenerales: [
+      "Terreno saneado, con documentos debidamente registrados en Registros Publicos.",
+      "Ubicado en una zona urbanizada con casas terminadas y bonitos disenos.",
+      "Cuenta con paisajes agradables y buena proyeccion residencial.",
+      "La pista llega al pie del terreno.",
+    ],
   },
   {
     id: 6,
-    titulo: "Terreno residencial en Jr. Chontabamba 402",
-    descripcion: "Lote ideal para vivienda familiar, zona tranquila con servicios basicos cercanos.",
+    titulo: "Aserradero en San Alberto",
+    descripcion:
+      "Propiedad ubicada en la pista de entrada a San Alberto, con excelente cercania al centro de Oxapampa y a solo 80 m de la pista principal.",
     operacion: "Venta",
     tipo: "Terreno",
-    ubicacion: "Jr. Chontabamba 402, Oxapampa",
-    precio: "$ 98,000",
+    ubicacion: "San Alberto, a 4 minutos del centro de Oxapampa",
+    precio: "USD 250,000",
     areaConstruida: 0,
-    areaTotal: 1100,
-    dormitorios: 0,
-    banos: 0,
-    imagen:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+    areaTotal: 1402,
+    imagen: "/c6/1.jpg",
+    galeria: ["/c6/1.jpg", "/c6/2.jpg", "/c6/3.jpg"],
+    fichaTecnica: [
+      { label: "Area de terreno", value: "1,402 m2" },
+      { label: "Precio", value: "USD 250,000" },
+      { label: "Medidas referenciales", value: "Aproximadamente 41 m de frente por 36 m de fondo" },
+      { label: "Servicios", value: "Luz, agua y conexion telefonica" },
+      { label: "Documentos", value: "Partida electronica en RRPP" },
+      { label: "Ubicacion", value: "A 4 minutos del centro y 80 m de la pista principal" },
+    ],
+    caracteristicasGenerales: [
+      "La propiedad se encuentra en la pista de entrada a San Alberto.",
+      "Tiene una ubicacion estrategica, a 4 minutos del centro de Oxapampa.",
+      "Se encuentra muy cerca de la pista principal, a solo 80 m.",
+    ],
   },
   {
     id: 7,
-    titulo: "Casa amoblada en Psj. Santa Rosa 33",
-    descripcion: "Casa lista para mudanza, con cocina equipada y patio posterior techado.",
-    operacion: "Alquiler",
-    tipo: "Casa",
-    ubicacion: "Psj. Santa Rosa 33, Oxapampa",
-    precio: "$ 1,100 / mes",
-    areaConstruida: 130,
-    areaTotal: 260,
-    dormitorios: 3,
-    banos: 2,
-    imagen:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+    titulo: "Terreno Los Juego",
+    descripcion:
+      "Propiedad con ubicacion privilegiada, en esquina y frente al campo principal, dentro de una de las calles mas importantes de Oxapampa.",
+    operacion: "Venta",
+    tipo: "Terreno",
+    ubicacion: "A 5 cuadras del centro de Oxapampa",
+    precio: "USD 500,000",
+    areaConstruida: 0,
+    areaTotal: 1097,
+    imagen: "/c7/1.jpg",
+    galeria: ["/c7/1.jpg", "/c7/2.jpg"],
+    fichaTecnica: [
+      { label: "Area de terreno", value: "1,097 m2" },
+      { label: "Medidas referenciales", value: "28.5 m de frente por 38.6 m de fondo" },
+      { label: "Precio", value: "USD 500,000" },
+      { label: "Servicios", value: "Luz, agua, desague y conexion" },
+      { label: "Documentos", value: "Titulo de propiedad y partida electronica en proceso en RRPP" },
+      { label: "Ubicacion", value: "A 5 cuadras del centro de Oxapampa" },
+    ],
+    caracteristicasGenerales: [
+      "Ubicacion privilegiada en esquina y frente al campo principal.",
+      "Zona comercial en una de las principales calles.",
+      "Cuenta con lindas vistas y alta exposicion.",
+    ],
   },
   {
     id: 8,
@@ -292,4 +483,3 @@ export const operaciones = ["Venta", "Alquiler", "Proyecto"] as const;
 
 export const buildWaLink = (message: string) =>
   `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
