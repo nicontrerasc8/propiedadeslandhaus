@@ -45,23 +45,24 @@ function LandingPageContent() {
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.45em] text-emerald-100">Propiedades GOXA</p>
                 <h1 className="mt-4 max-w-2xl text-3xl font-bold leading-tight text-white md:text-5xl">
-                  Encuentra espacios que elevan tu estilo de vida
+                  Propiedades seleccionadas para vivir e invertir en Oxapampa
                 </h1>
                 <p className="mt-5 max-w-xl text-white/90 md:text-lg">
-                  Compra, venta y alquiler con informacion real, fotografias propias y acompanamiento directo.
+                  Casas y terrenos con ubicaciones privilegiadas, informacion verificada y acompanamiento
+                  personalizado durante todo el proceso.
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     href="#propiedades-grid"
                     className="rounded-full bg-amber-400 px-6 py-3 font-semibold text-slate-900 transition hover:bg-amber-300"
                   >
-                    Ver las propiedades
+                    Explorar propiedades
                   </Link>
                   <Link
                     href="/quienes-somos"
                     className="rounded-full border border-white/80 bg-white/10 px-6 py-3 font-semibold text-white transition hover:bg-white/20"
                   >
-                    Quienes somos
+                    Conocer GOXA
                   </Link>
                 </div>
               </div>
@@ -76,19 +77,19 @@ function LandingPageContent() {
         <div className="rounded-[2rem] border border-white/60 bg-white/90 p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] backdrop-blur-sm md:p-8 xl:p-10">
           <div className="flex flex-col gap-4 border-b border-slate-200/80 pb-6 md:flex-row md:items-end md:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-700">Portafolio GOXA</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.35em] text-emerald-700">Seleccion GOXA</p>
               <h2 className="mt-2 text-3xl font-bold leading-tight text-slate-950 md:text-4xl">
-                Las 7 propiedades que me pasaste ya estan aqui
+                Residencias y terrenos con alto potencial en Oxapampa
               </h2>
               <p className="mt-3 max-w-2xl text-base leading-7 text-slate-600">
-                Casas y terrenos en Oxapampa con informacion clara, fotos reales y acceso directo al detalle de cada
-                propiedad.
+                Una coleccion curada de propiedades en venta, presentada con fotografias reales, informacion precisa y
+                acceso directo a cada ficha completa.
               </p>
             </div>
 
             <div className="rounded-2xl bg-emerald-50 px-5 py-4 text-sm text-slate-700">
-              <p className="font-semibold text-slate-900">{propiedadesVisibles.length} propiedades publicadas</p>
-              <p className="mt-1">Venta de casas y terrenos en ubicaciones clave de Oxapampa.</p>
+              <p className="font-semibold text-slate-900">{propiedadesVisibles.length} propiedades seleccionadas</p>
+              <p className="mt-1">Casas y terrenos en venta en ubicaciones estrategicas de Oxapampa.</p>
             </div>
           </div>
 
@@ -131,9 +132,7 @@ function LandingPageContent() {
                     <p>Precio: {propiedad.precio}</p>
                     <p>Area total: {propiedad.areaTotal} m2</p>
                     <p>Area construida: {propiedad.areaConstruida} m2</p>
-                    <p>
-                      {propiedad.dormitorios ? `${propiedad.dormitorios} dormitorios` : "Sin dormitorios definidos"}
-                    </p>
+                    <p>{propiedad.dormitorios ? `${propiedad.dormitorios} dormitorios` : propiedad.tipo}</p>
                   </div>
 
                   <Link
