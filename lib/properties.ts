@@ -23,7 +23,7 @@ export type Propiedad = {
   caracteristicasGenerales?: string[];
 };
 
-export const whatsappNumber = "51998855069";
+export const whatsappNumber = "51976291356";
 
 export const propiedades: Propiedad[] = [
   {
