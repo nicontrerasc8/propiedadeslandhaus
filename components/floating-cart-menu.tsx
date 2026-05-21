@@ -14,7 +14,7 @@ const NAV_LINKS = [
 ];
 
 const WHATSAPP_LINK =
-  "https://wa.me/51998855069?text=Hola%20GOXA%2C%20quisiera%20hacer%20una%20consulta.";
+  "https://wa.me/51976291356?text=Hola%20GOXA%2C%20quisiera%20hacer%20una%20consulta.";
 
 const triggerClasses =
   "flex items-center gap-2 rounded-full border border-emerald-200 bg-gradient-to-br from-white/90 to-emerald-50 px-4 py-2 text-sm font-semibold tracking-wide text-emerald-900 shadow-[0_20px_40px_-20px_rgba(4,73,45,0.9)] transition duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-300 sm:gap-3";
