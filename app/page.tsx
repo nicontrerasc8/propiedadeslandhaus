@@ -67,7 +67,24 @@ function LandingPageContent() {
                 </div>
               </div>
 
-              
+              <div className="relative mx-auto w-full max-w-xl">
+                <div className="absolute -inset-3 rounded-[2rem] bg-amber-300/15 blur-2xl" aria-hidden />
+                <div className="relative overflow-hidden rounded-[1.65rem] bg-slate-950 p-2 shadow-2xl ring-1 ring-white/25">
+                  <div className="absolute left-5 top-5 z-10 rounded-full bg-white/90 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.24em] text-slate-800 shadow-sm">
+                    Descubre Oxapampa
+                  </div>
+                  <video
+                    className="aspect-video w-full rounded-[1.2rem] object-cover"
+                    controls
+                    playsInline
+                    preload="metadata"
+                    aria-label="Video de presentación de GOXA Propiedades"
+                  >
+                    <source src="/Goxa%20propiedades%20-%20N1%20-%20v2.0%20-%20Comprimido.mp4" type="video/mp4" />
+                    Tu navegador no admite la reproducción de video.
+                  </video>
+                </div>
+              </div>
             </div>
           </div>
         </div>
