@@ -90,6 +90,19 @@ function LandingPageContent() {
         </div>
       </section>
 
+      <section className="mx-auto mt-10 max-w-[1500px] px-4">
+        <div className="group relative isolate overflow-hidden rounded-[2rem] bg-[#172313] px-7 py-12 text-white shadow-2xl md:px-12 md:py-16">
+          <Image src="/saxonia/page-1.jpg" alt="Saxonia Hills en Oxapampa" fill className="-z-20 object-cover transition duration-700 group-hover:scale-105" />
+          <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#13200f]/95 via-[#13200f]/75 to-[#13200f]/25" />
+          <div className="max-w-2xl">
+            <p className="text-xs font-bold uppercase tracking-[0.36em] text-amber-200">Proyecto destacado · Oxapampa</p>
+            <h2 className="mt-4 font-[family-name:var(--font-display)] text-4xl leading-none md:text-6xl">Saxonia Hills</h2>
+            <p className="mt-5 max-w-xl text-base leading-7 text-white/85 md:text-lg">Un condominio de cottages con 9 sublotes exclusivos, rodeado de bosque, río y montañas, a 15 minutos de Oxapampa.</p>
+            <Link href="/proyectos/saxonia-hills" className="mt-8 inline-flex rounded-full bg-amber-300 px-6 py-3 font-bold text-[#1d2918] transition hover:bg-amber-200">Conocer el proyecto</Link>
+          </div>
+        </div>
+      </section>
+
       <section id="propiedades-grid" className="mx-auto my-10 max-w-[1500px] px-4 pb-6">
         <div className="rounded-[2rem] border border-white/60 bg-white/90 p-6 shadow-[0_20px_60px_-30px_rgba(15,23,42,0.35)] backdrop-blur-sm md:p-8 xl:p-10">
           <div className="flex flex-col gap-4 border-b border-slate-200/80 pb-6 md:flex-row md:items-end md:justify-between">
